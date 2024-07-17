@@ -1,14 +1,10 @@
-import os
-from dotenv import load_dotenv # pip install dotenv
 import openai  # pip install openai
 import typer  # pip install "typer[all]"
 from rich import print  # pip install rich
 from rich.table import Table
 
-load_dotenv()
-api_key       = os.getenv('OPENAI_API_KEY')
 
-# La bse del codigo se encuentra en:
+# La bse del codigo fue copiada de:
 # https://gist.github.com/mouredev/58abfbcef017efaf3852e8821564c011
 """
 Webs de interés:
@@ -17,7 +13,13 @@ Webs de interés:
 - Typer: https://typer.tiangolo.com
 - Rich: https://rich.readthedocs.io/en/stable/
 """
+# en esta opcion se modificó el archivo correspondiente al __cliente del openai-env
 
+from openai import OpenAI
+
+client = OpenAI()
+
+api_key = client.api_key
 
 def main():
 

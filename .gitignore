@@ -1,2 +1,4 @@
 venv
 .env
+openai-env
+set_envi_var.py
